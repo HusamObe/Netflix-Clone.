@@ -1,0 +1,35 @@
+.card {
+    background-color: #000;
+    border: none;
+    color: #fff;
+    max-width: 260px;
+    margin-bottom: 30px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.btn-danger {
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.btn-danger:hover {
+    background-color: #f40612;
+    border-color: #f40612;
+}
