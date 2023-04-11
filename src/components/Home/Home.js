@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+
 import MovieList from "../MovieList/MovieList";
 import { useState, useEffect } from 'react';
 
@@ -19,12 +19,34 @@ function Home() {
 
     };
 
+    const addComment = (data, id) => {
+        let addComment = movies.map(movies => {
+            if (movies.id === id) {
+                movies.caption = data.userCaption;
+                movies.isCaption = !movies.isCaption;
+                return movies;
+            }
+            else return movies
+        })
+        setMovies(addComment);
+    };
+
 
     useEffect(() => { fetchData(); }, []);
     return (
-        <>
-            <MovieList movies={movie} />
-        </>
+        <div>
+            {film && (<Container fluid >
+                <Row>
+
+                    <MovieList
+                        addComment={addComment}
+                        movies={movies} />
+                </Row>
+            </Container>)}
+
+
+
+        </div>
 
     )
 }
